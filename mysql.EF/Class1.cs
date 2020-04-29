@@ -20,17 +20,15 @@ namespace mysql.EF
             optionsBuilder.UseMySql("persistsecurityinfo=True;server=localhost;user id=root;password=password1;database=sakila;allowuservariables=True");
         }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-
-
-            modelBuilder.Entity<category>(entity =>
-            {
-                entity.HasKey(e => e.category_id);
-                entity.Property(e => e.name);
-                entity.Property(d => d.last_update);
-            });
-        }
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    base.OnModelCreating(modelBuilder);
+        //    modelBuilder.Entity<category>(entity =>
+        //    {
+        //        entity.HasKey(e => e.category_id);
+        //        entity.Property(e => e.name);
+        //        entity.Property(d => d.last_update);
+        //    });
+        //}
     }
 }
